@@ -2,48 +2,92 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="description" content="Header for web">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Luna Gui">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Lunagui webheader</title>
+<title>Lunagui Header</title>
 <style>
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
-    
-    li {
-      float: left;
-    }
-    
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    li a:hover:not(.active) {
-      background-color: #111;
-    }
-    
-    .active {
-      background-color: #04AA6D;
-    }
-    </style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: left;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
 </head>
 <body>
 
-<h1>Luna Gui</h1>
-<ul>
-    <li><a href="#home">Work</a></li>
-    <li><a href="#news">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li style="float:right"><a class="active" href="#about">instagram</a></li>
-</ul>
+<div class="header">
+  <h1>Luna Gui</h1>
+</div>
+
+<div class="topnav">
+  <a href="#">Work</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+  <a href="https://www.instagram.com/luna.gui_/?hl=en" target="_blank" style="float:right">Instagram</a>
+</div>
+
+<ul> 
+    <li><a href="index.html" target="_top">Work</a></li> 
+    <li><a href="page-2.html" target="_top">page 2</a></li> 
+</ul> 
 
 </body>
 </html>
+
+
