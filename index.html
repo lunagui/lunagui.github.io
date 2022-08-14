@@ -42,31 +42,15 @@ body, html {
   font-weight: bold;
   /* border: 3px solid #f1f1f1; */
   position: absolute;
-  top: 20%; 
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 8px;
+  left: 16px;
+  /* transform: translate(-50%, -50%); */
   z-index: 2;
-  width: 80%;
+  width: 60%;
   padding: 20px;
   text-align: left;
 }
 
-/* Position on the left top of the page/image */
-.bg-quote {
-  /* background-color: rgb(0,0,0); Fallback color */
-  background-color: rgba(0,0,0, 0.4);/*  Black w/opacity/see-through */
-  color: white;
-  font-weight: bold;
-  border: 3px solid #f1f1f1;
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  width: 50%;
-  padding: 20px;
-  text-align: left;
-}
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -139,8 +123,18 @@ body, html {
         <a href="https://www.instagram.com/luna.gui_/?hl=en" target="_blank" style="float:right">Instagram</a>
       </div>
     <!-- <div class="menubutton"></div> -->
-
-<script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "150px";
+        document.getElementById("main").style.marginLeft = "150px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
+<!-- <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "150px";
 }
@@ -148,7 +142,7 @@ function openNav() {
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
-</script>
+</script> -->
 </body>
 </html>
 
