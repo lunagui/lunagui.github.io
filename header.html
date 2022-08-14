@@ -57,6 +57,34 @@ body {
   color: black;
 }
 
+/* home button*/
+.homeL {
+  overflow: hidden;
+  /* background-color: #333; */
+}
+
+.homeL a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.homeL a:hover {
+  /* background-color: #ddd; */
+  color:white;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 700px) {
   .topnav {
     width: 100%;
@@ -79,11 +107,12 @@ body {
 <body>
 
 <div class="header">
-  <h1>Luna Gui</h1>
+  <div class="homeL">
+    <a href="index.html" target="_top"><h1>Luna Gui</h1></a>
 </div>
 
 <div class="topnav">
-  <a href="index.html" target="_top">Work</a>
+  <a href="work.html" target="_top">Work</a>
   <a href="About.html" target="_top">About</a>
   <a href="contact.html" target="_top">Contact</a>
   <a href="https://www.instagram.com/luna.gui_/?hl=en" target="_blank" style="float:right">Instagram</a>

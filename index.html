@@ -2,149 +2,134 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Artwork by luna">
+<meta name="description" content="Luna Gui">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Luna Gui">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Work From Luna</title>
+<title>Luna Gui</title>
 <style>
+body, html {
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #f1f1f1;
+.bg-image {
+  /* The image used */
+  background-image: url("images/notacube.jpg");
+
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-/* image auto fit */
-img {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: left;
-  background: white;
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 50%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 50%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  height: 400px;
-  /* padding: 20px; */
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
+/* Position on the left top of the page/image */
+.bg-text {
+  /* background-color: rgb(0,0,0); Fallback color */
+  /* background-color: rgba(0,0,0, 0.4); Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  /* border: 3px solid #f1f1f1; */
+  position: absolute;
+  top: 20%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
   padding: 20px;
-  margin-top: 20px;
+  text-align: left;
+}
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  float:right;
+  position: fixed;  /*Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 100px;
+  float:right;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 50px;}
+  .sidenav a {font-size: 18px;}
+}
+
 </style>
+
 </head>
 <body>
-  <iframe src="header.html" width="100%" height="260" style="border:2px solid white;"></iframe> 
-
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      
-      <div class="fakeimg">
-        <a href="upthestairs2021.html">
-        <img src="images/upthestairs.jpeg" alt="image of up the stairs" style="width:100%;height:100%;">
-      </a>
+    <div class="bg-image"></div>
+    <div class="bg-text">
+      <h1>Luna Gui</h1>
+      <p>A site for my artworks.</p>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="work.html" target="_top">Work</a>
+        <a href="About.html" target="_top">About</a>
+        <a href="contact.html" target="_top">Contact</a>
+        <a href="https://www.instagram.com/luna.gui_/?hl=en" target="_blank" style="float:right">Instagram</a>
       </div>
-      <h2>Up the stairs 2021</h2>
-      <h5>Artiqulate Project Space. 2021</h5>
-      <p>Some text..</p>
-    </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-        <div class="fakeimg">
-        <img src="images/notacube.jpg" alt="image of Not a cube" style="width:100%;height:100%;">
-       </div>
-        <h2>Not a Cube 2022</h2>
-        <h5>NAS Drawing Project 2022</h5>
-        <p>Some text..</p>
-      </div>
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
-</div>
+    <!-- <div class="menubutton"></div> -->
 
-<iframe src="footer.html" width="100%" height="180" style="border:2px solid white;"></iframe> 
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
-
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 </body>
 </html>
 
