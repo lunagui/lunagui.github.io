@@ -11,13 +11,13 @@
 
 <style>
     body, html {
-  height: 100%;
-  overflow-y: hidden;
+  height: 100px;
+  overflow: hidden;
 }
 
 .bg-image {
   /* The image used */
-  background-image: url("images/notacube.jpg");
+  background-image: url("images/pigforheader.jpg");
 
   /* Add the blur effect */
   filter: blur(8px);
@@ -53,7 +53,7 @@
   position: absolute;
   top: 8px;
   left: 16px;
-  color: white;
+  color: black;
   font-weight: bold;
   text-align: left;
   width: 60%;
@@ -64,7 +64,6 @@
   position: absolute;
   top: 30px;
   right: 50px;
-  color: white;
 }
 
 /* Bottom right text
@@ -86,8 +85,8 @@
     /* The Overlay (background) */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-  height: 100%;
-  width: 0;
+  height: 0;
+  width: 100%;
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   right: 0;
@@ -146,9 +145,6 @@
         <div class="bg-image"></div>
         <div class="top-left">
             <h1>Luna Gui</h1>
-            <p>A site for my artworks.</p>
-            <p>“The artist must be blind to distinction between 'recognized' or 'unrecognized' conventions of form, deaf to the transitory teaching and demands of his particular age.”
-                ― Wassily Kandinsky, Concerning the Spiritual in Art</p>
         </div>
         <div class="top-right">  <!-- Use any element to open/show the overlay navigation menu -->
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
@@ -162,12 +158,10 @@
   
     <!-- Overlay content -->
     <div class="overlay-content">
-        <a href="index.html">Home</a>
-      <a href="Installation.html">Installation Projects</a>
+      <a href="#">Installation Projects</a>
       <a href="#">Painting & Drawing</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
-      <a href="#">Instagram</a>
     </div>
   
   </div>
@@ -175,16 +169,19 @@
 
 
   <script>
+    
     /* Open when someone clicks on the span element */
 function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+  document.getElementById("myNav").style.height = "100%";
 }
 
 /* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+  document.getElementById("myNav").style.height = "0%";
 }
+
   </script>
+  
 </body>
 </html>
 
