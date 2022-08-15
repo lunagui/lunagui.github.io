@@ -2,59 +2,35 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="description" content="Header for web">
+<meta name="description" content="Luna Gui">
 <meta name="keywords" content="HTML, CSS, JavaScript">
 <meta name="author" content="Luna Gui">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- header file -->
+<title>Luna Gui</title>
 
-<title>Lunagui Header</title>
 <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial;
-  /* padding: 10px; */
-  /* background: #f1f1f1; */
-  background-image: url('images/picforheader2.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 100% 100%;
-  /* object-fit: cover */
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: left;
-  /* background: white; */
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
+    body, html {
+  height: 250px;
   overflow: hidden;
-  background-color: #333;
 }
 
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+.bg-image {
+  /* The image used */
+  background-image: url("images/pigforheader.jpg");
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  /* opacity: 0.8; */
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* home button*/
@@ -77,47 +53,128 @@ body {
   color:white;
 }
 
-a:visited {
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: black;
+  font-weight: bold;
+  text-align: left;
+  width: 60%;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+}
+
+    
+    /* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 0;
+  width: 100%;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  right: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
   text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
 }
 
-a:hover {
-  text-decoration: none;
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
 }
 
-@media screen and (max-width: 700px) {
-  .topnav {
-    width: 100%;
-    height: auto;
-    position: relative;
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
   }
-  .topnav a {float: left;}
-  div.content {margin-left: 0;}
 }
-
-@media screen and (max-width: 400px) {
-  .topnav a {
-    text-align: center;
-    float: none;
-  }
-}
-
 </style>
+
 </head>
 <body>
+        <div class="bg-image"></div>
+        <div class="top-left">
+          <div class="homeL">
+            <a href="index.html" target="_top"><h1>Luna Gui</h1></a>
+        </div>
+        </div>
+        <div class="top-right">  <!-- Use any element to open/show the overlay navigation menu -->
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
 
-<div class="header">
-  <div class="homeL">
-    <a href="index.html" target="_top"><h1>Luna Gui</h1></a>
-</div>
+    <!-- The overlay -->
+<div id="myNav" class="overlay">
 
-<div class="topnav">
-  <a href="work.html" target="_top">Work</a>
-  <a href="About.html" target="_top">About</a>
-  <a href="contact.html" target="_top">Contact</a>
-  <a href="https://www.instagram.com/luna.gui_/?hl=en" target="_blank" style="float:right">Instagram</a>
-</div>
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a href="index.html" target="_top">Home</a>
+      <a href="Installation.html" target="_top">Installation Projects</a>
+      <a href="#" target="_top">Painting & Drawing</a>
+      <a href="About.html" target="_top">About</a>
+      
+    </div>
+  
+  </div>
+  
 
+
+  <script>
+    
+    /* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+
+  </script>
+  
 </body>
 </html>
 
