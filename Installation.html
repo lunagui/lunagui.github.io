@@ -10,15 +10,26 @@
 <title>Luna Installation</title>
 
 <style>
-    /* Container holding the image and the text */
-    .container {
-  position: relative;
-  margin-top: 50px;
-  margin-left: 50px;
-  text-align: left;
-  color: black;
-  width: 80%;
-}
+      * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: white;
+      padding: 20px;
+      font-family: Arial;
+    }
+      /* Center website */
+      .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+.content {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
 
 </style>
 
@@ -27,12 +38,14 @@
     <!-- include header.html-->
     <iframe src="header.html" width="100%" height="250" style="border:2px solid white;"></iframe> 
     
-  <div class="container">
-    <img src="images/upthestairs.jpeg" alt="image of up the stairs" style="width:100%;height: 100%;">
+    <div class="main">
+  <div class="content">
+    <img src="images/upthestairs.jpeg" alt="image of up the stairs" style="width:100% ;height:100%;">
     <h3>Proximity 2021</h3>
     <p>Welcome to Luna Gui's website. This is a website that I have created to showcase my work. I hope you enjoy it!</p>
     <p>Click the button below to learn more about my work.</p>
     <button type="button" class="btn btn-primary" onclick="window.location.href='installation.html'">Learn More</button>
+</div>
 </div>
   
 <iframe src="footer.html" width="100%" height="200" style="border:2px solid white;"></iframe> 
