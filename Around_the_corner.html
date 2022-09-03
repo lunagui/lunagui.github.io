@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Luna Around the corner>
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Luna Gui">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luna Expanded Drawing</title>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: white;
+      padding: 20px;
+      font-family: Arial;
+    }
+    
+    /* Center website */
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+    
+    h1 {
+      font-size: 50px;
+      word-break: break-all;
+    }
+    
+    .row {
+      margin: 8px -16px;
+    }
+    
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+    
+    /* Create four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+    }
+
+    .columnhalf {
+      float: left;
+      width: 50%;
+    }
+    
+    /* Clear floats after rows */ 
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Content */
+    .content {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 900px) {
+      .column {
+        width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    </style>
+
+</head>
+<body>
+    <!-- include header.html-->
+    <iframe src="header.html" width="100%" height="200" style="border:2px solid white;"></iframe> 
+ 
+<!-- MAIN (Center website) -->
+<div class="main">
+
+    <h2>Expanded Drawing project (Ongoing...)</h2>
+    <p>My work started with exploring the relationship between the 2D forms and 3D structures. 
+    <h5>Artists and Theory influenced my work:<br>  
+Margel Hinder exhibition in Art gallery of NSW, Modern in Motion<br>
+Robert Smithson’s work and writing<br>
+Frances Colpitt’s book, Minimal Art: The Critical Perspective</h5>
+
+    </p>
+    <hr>
+    
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column">
+        <div class="content">
+          <img src="images/shape01.jpg" alt="pic of installation" style="width:100%">
+          <!-- <h3>Line on Reds</h3>
+          <p>Acrylic on canvas, 18x24", 2022</p> -->
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="images/notacube.jpg" alt="pic of installation" style="width:100%">
+          <h3>Not A Cube</h3>
+          <!-- <p>Acrylic on canvas, 18x24", 2022</p> -->
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="images/3dtripz1.jpg" alt="pic of installation" style="width:100%">
+          <!-- <h3>Line on Reds</h3>
+          <p>Acrylic on canvas, 18x24", 2022</p> -->
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <img src="images/config01.jpg" alt="pic of installation" style="width:100%">
+          <!-- <h3>Line on Reds</h3>
+          <p>Acrylic on canvas, 18x24", 2022</p> -->
+        </div>
+      </div>
+    
+    <!-- END GRID -->
+    </div>
+    
+    <div class="content">
+      <img src="images/mildsteel.jpg" alt="pic of painting" style="width:100%">
+      <!-- <h3>Sandstone City 1&2</h3>
+      <p>Oil on canvas, 40x40" each, 2021</p> -->
+      <!-- <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p> -->
+    </div>
+    
+    <!-- END MAIN -->
+    </div>
+
+    
+  
+<iframe src="footer.html" width="100%" height="200" style="border:2px solid white;"></iframe> 
+  
+</body>
+</html>
+
+
