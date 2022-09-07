@@ -40,11 +40,20 @@
     .row > .column {
       padding: 8px;
     }
+
+    .row > .columnhalf {
+      padding: 8px;
+    }
     
     /* Create four equal columns that floats next to each other */
     .column {
       float: left;
       width: 25%;
+    }
+
+    .columnhalf {
+      float: left;
+      width: 50%;
     }
     
     /* Clear floats after rows */ 
@@ -83,7 +92,7 @@
 <!-- MAIN (Center website) -->
 <div class="main">
 
-    <h2>Selected paintings</h2>
+    <h2>Selected Work</h2>
     <hr>
     
     <!-- Portfolio Gallery Grid -->
@@ -118,6 +127,23 @@
       </div>
     <!-- END GRID -->
     </div>
+
+    <div class="row">
+      <div class="columnhalf">
+        <div class="content">
+          <img src="images/inkfigure2.jpg" alt="pic of drawing" style="width:100%">
+          <h3>Life drawing</h3>
+          <p>Ink, charcoal on paper, A1, 2021</p>
+        </div>
+      </div>
+      <div class="columnhalf">
+        <div class="content">
+          <img src="images/inkfigure1.jpg" alt="pic of drawing" style="width:100%">
+          <h3>Figure from a Structure</h3>
+          <p>Charcoal, pastel, ink on creamy Stonehenge paper 250gsm, 56x76cm, 2021</p>
+        </div>
+      </div>
+    </div>
     
     <div class="content">
       <img src="images/sandstonecity.jpg" alt="pic of painting" style="width:100%">
@@ -125,7 +151,7 @@
       <p>Oil on canvas, 40x40" each, 2021</p>
       <!-- <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p> -->
     </div>
-    
+
     <!-- END MAIN -->
     </div>
     
