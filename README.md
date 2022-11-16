@@ -1,2 +1,2 @@
 # lunagui.github.io
-Art website for lunagui
+Art website for Luna Gui.
