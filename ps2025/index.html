@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Luna Derivatives 2024-25>
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Luna Gui">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NAS PS show 2025</title>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: white;
+      padding: 20px;
+      font-family: Arial;
+    }
+    
+    /* Center website */
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+    
+    h1 {
+      font-size: 50px;
+      word-break: break-all;
+    }
+    
+    .row {
+      margin: 8px -16px;
+    }
+    
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+    
+    /* Create four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+    }
+
+    .columnhalf {
+      float: left;
+      width: 50%;
+    }
+    
+    /* Clear floats after rows */ 
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Content */
+    .content {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 900px) {
+      .column {
+        width: 50%;
+      }
+      .columnhalf {
+        width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+      .columnhalf {
+        width: 100%;
+      }
+    }
+    </style>
+
+</head>
+<body>
+    <!-- include header.html
+    change the height if add new button-->
+    <iframe src="../header.html" width="100%" height="230" style="border:2px solid white;"></iframe> 
+    
+<!-- MAIN (Center website) -->
+<div class="main">
+
+    <h2>National Art School Postgraduate Exhibition 2026</h2>
+    <h5>The 2025 National Art School Postgraduate Exhibition was presented across two sites. Each graduating artist exhibited work in both the NAS Gallery and their individual studio, allowing audiences to encounter finished works in a curated exhibition setting as well as the ongoing context of each artist's practice.</h5>
+
+
+    <!-- INSTALLATION VIEW WITH CLICKABLE ARTWORKS -->
+
+<section class="installation-section">
+  <h2>Gallery Installation</h2>
+
+  <p class="installation-instruction">
+    Select an artwork in the installation view to see a closer image.
+  </p>
+
+  <div class="installation-map">
+    <img
+      src="images/psgallery.jpg"
+      alt="Installation view of Luna Gui’s works in the 2025 National Art School Postgraduate Exhibition"
+      class="installation-image"
+    >
+
+    <!--
+      Hotspot positions use percentages:
+      left, top, width and height.
+
+      Adjust these values until each hotspot sits over the correct artwork.
+    -->
+
+    <button
+      class="artwork-hotspot"
+      style="left: 5%; top: 30%; width: 20%; height: 20%;"
+      data-image="images/m51.jpeg"
+      data-title="M51"
+      data-details="gesso, pencil and acrylic on wood constructions<br>dimensions variable (approx. 36.7 x 80 x 7 cm)<br>2025"
+      aria-label="Open detailed image of Work One"
+    ></button>
+
+
+    <button
+  class="artwork-hotspot"
+  style="left: 29%; top: 45%; width: 15%; height: 48%;"
+  data-image="images/DerivativesN1191.jpeg"
+  data-title="Derivatives N/11.9.1 (Till this point)"
+  data-details="acrylic on wood construction, 121 × 24 × 5 cm, 2025"
+  data-collection="City of Sydney Art Collection"
+  aria-label="Open detailed image of Deriv">
+</button>
+
+
+    <button
+      class="artwork-hotspot"
+      style="left: 50%; top: 20%; width: 17%; height: 40%;"
+      data-image="images/ci_sheets.jpeg"
+      data-title="CI Sheets"
+        data-details="acrylic on wood construction, 64 x 37.5 x 5.2 cm, 2025"
+     data-collection="Private Collection"
+      aria-label="Open detailed image of Work Three"
+    ></button>
+
+    <button
+      class="artwork-hotspot"
+      style="left: 72%; top: 30%; width: 20%; height: 20%;"
+      data-image="images/oi2025.jpg"
+      data-title="Orbit Intersect"
+        data-details="acrylic and pencil on wood construction, 31 x 65 x 5.5 cm, 2025"
+  data-collection="City of Sydney Art Collection"
+      aria-label="Open detailed image of Work Four"
+    ></button>
+  </div>
+</section>
+
+
+<!-- LIGHTBOX -->
+
+<div
+  class="artwork-lightbox"
+  id="artworkLightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-labelledby="lightboxTitle"
+>
+  <button
+    class="lightbox-close"
+    id="lightboxClose"
+    type="button"
+    aria-label="Close detailed artwork image"
+  >
+    &times;
+  </button>
+
+  <button
+    class="lightbox-arrow lightbox-previous"
+    id="lightboxPrevious"
+    type="button"
+    aria-label="Previous artwork"
+  >
+    &#10094;
+  </button>
+
+  <figure class="lightbox-content">
+    <img
+      src=""
+      alt=""
+      id="lightboxImage"
+      class="lightbox-image"
+    >
+
+    <figcaption class="lightbox-caption">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxDetails"></p>
+    </figcaption>
+  </figure>
+
+  <button
+    class="lightbox-arrow lightbox-next"
+    id="lightboxNext"
+    type="button"
+    aria-label="Next artwork"
+  >
+    &#10095;
+  </button>
+</div>
+
+
+<style>
+.collection {
+  margin-top: 0.8rem;
+  font-style: normal;
+  opacity: 0.75;
+}
+  .installation-section {
+    width: min(100%, 1200px);
+    margin: 4rem auto;
+  }
+
+  .installation-instruction {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    opacity: 0.7;
+  }
+
+  .installation-map {
+    position: relative;
+    width: 100%;
+  }
+
+  .installation-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .artwork-hotspot {
+    position: absolute;
+    display: block;
+    padding: 0;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: zoom-in;
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease;
+  }
+
+  .artwork-hotspot:hover,
+  .artwork-hotspot:focus-visible {
+    border-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.12);
+    outline: none;
+  }
+
+  .artwork-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem;
+    background: rgba(0, 0, 0, 0.94);
+  }
+
+  .artwork-lightbox.is-open {
+    display: flex;
+  }
+
+  .lightbox-content {
+    max-width: min(1100px, 88vw);
+    max-height: 92vh;
+    margin: 0;
+    text-align: center;
+  }
+
+  .lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: 78vh;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .lightbox-caption {
+    margin-top: 1rem;
+    color: white;
+  }
+
+  .lightbox-caption h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .lightbox-caption p {
+    margin: 0.35rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.75;
+  }
+
+  #lightboxTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+#lightboxTitle em {
+  font-style: italic;
+}
+#lightboxDetails {
+  margin-top: 0.6rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+  .lightbox-close,
+  .lightbox-arrow {
+    position: absolute;
+    border: 0;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+  }
+
+  .lightbox-close {
+    top: 1rem;
+    right: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .lightbox-arrow {
+    top: 50%;
+    padding: 1rem;
+    font-size: 2rem;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-previous {
+    left: 1rem;
+  }
+
+  .lightbox-next {
+    right: 1rem;
+  }
+
+  .lightbox-close:hover,
+  .lightbox-close:focus-visible,
+  .lightbox-arrow:hover,
+  .lightbox-arrow:focus-visible {
+    opacity: 0.65;
+    outline: none;
+  }
+
+  body.lightbox-open {
+    overflow: hidden;
+  }
+
+  @media (max-width: 700px) {
+    .installation-section {
+      margin: 2.5rem auto;
+    }
+
+    .artwork-lightbox {
+      padding: 3.5rem 1rem 5rem;
+    }
+
+    .lightbox-content {
+      max-width: 100%;
+    }
+
+    .lightbox-image {
+      max-height: 70vh;
+    }
+
+    .lightbox-arrow {
+      top: auto;
+      bottom: 0.75rem;
+      transform: none;
+    }
+
+    .lightbox-previous {
+      left: calc(50% - 4rem);
+    }
+
+    .lightbox-next {
+      right: calc(50% - 4rem);
+    }
+  }
+</style>
+
+
+<script>
+  const hotspots = Array.from(
+    document.querySelectorAll(".artwork-hotspot")
+  );
+
+  const lightbox = document.getElementById("artworkLightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const lightboxTitle = document.getElementById("lightboxTitle");
+  const lightboxDetails = document.getElementById("lightboxDetails");
+  const closeButton = document.getElementById("lightboxClose");
+  const previousButton = document.getElementById("lightboxPrevious");
+  const nextButton = document.getElementById("lightboxNext");
+
+  let currentArtworkIndex = 0;
+  let lastFocusedHotspot = null;
+
+function showArtwork(index) {
+  currentArtworkIndex =
+    (index + hotspots.length) % hotspots.length;
+
+  const artwork = hotspots[currentArtworkIndex];
+
+  lightboxImage.src = artwork.dataset.image;
+  lightboxImage.alt = artwork.dataset.title;
+
+  lightboxTitle.innerHTML = `<em>${artwork.dataset.title}</em>`;
+
+  let html = artwork.dataset.details;
+
+  if (artwork.dataset.collection) {
+    html += `<div class="collection">${artwork.dataset.collection}</div>`;
+  }
+
+  lightboxDetails.innerHTML = html;
+}
+
+  function openLightbox(index) {
+    lastFocusedHotspot = document.activeElement;
+
+    showArtwork(index);
+
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+
+    closeButton.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("lightbox-open");
+
+    lightboxImage.src = "";
+
+    if (lastFocusedHotspot) {
+      lastFocusedHotspot.focus();
+    }
+  }
+
+  hotspots.forEach((hotspot, index) => {
+    hotspot.addEventListener("click", () => {
+      openLightbox(index);
+    });
+  });
+
+  previousButton.addEventListener("click", () => {
+    showArtwork(currentArtworkIndex - 1);
+  });
+
+  nextButton.addEventListener("click", () => {
+    showArtwork(currentArtworkIndex + 1);
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!lightbox.classList.contains("is-open")) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+
+    if (event.key === "ArrowLeft") {
+      showArtwork(currentArtworkIndex - 1);
+    }
+
+    if (event.key === "ArrowRight") {
+      showArtwork(currentArtworkIndex + 1);
+    }
+  });
+</script>
+
+
+    <!-- studio part -->
+
+    <h2>Studio Installation</h2>
+
+    <div class="content">
+        <img src="images/psatoz.jpg" alt="pic of installation" style="width:100%">
+        <h5><i class="fa fa-italic" aria-hidden="true">|Λ–Z|</i>, Installation view, 2025, NAS Drawing Gallery, Sydney</h5>
+        <p><a href="../atoz.html"  target="_blank">Further documentation</a></p>
+     </div>
+     
+    
+    <!-- END MAIN -->
+    </div>
+
+    
+  
+<iframe src="../footer.html" width="100%" height="200" style="border:2px solid white;"></iframe> 
+  
+</body>
+</html>
+
+
