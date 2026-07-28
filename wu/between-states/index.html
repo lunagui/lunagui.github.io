@@ -45,27 +45,268 @@
   background-color: rgb(45, 79, 179);
 }
 
-/* essay style */
+/* =========================
+   BETWEEN STATES — ESSAY
+   ========================= */
+
+.essay {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+/* Title area */
+
 .essay-header {
     text-align: center;
-    margin: 4rem 0 5rem;
+    margin: 3rem 0 5.5rem;
 }
 
 .essay-header h1 {
-    font-size: 2.6rem;
+    margin: 0 0 1.4rem;
+    font-size: clamp(2.4rem, 6vw, 3.4rem);
     font-weight: 400;
-    margin-bottom: 1rem;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
 }
 
 .essay-header .author,
-.essay-header .year {
+.essay-header .place-date {
     margin: 0;
-    color: #666;
     font-size: 1rem;
+    line-height: 1.65;
+    color: #666;
 }
 
-.essay-header .year {
-    margin-top: 0.3rem;
+.essay-header .place-date {
+    margin-top: 0.15rem;
+}
+
+/* Exhibition information */
+
+.essay-context {
+    max-width: 520px;
+    margin: 0 auto 4.5rem;
+    text-align: center;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+.essay-context p {
+    margin: 0;
+}
+
+/* Introductory note */
+
+.essay-introduction {
+    margin-bottom: 4rem;
+    padding-left: 1.4rem;
+    border-left: 1px solid #aaa;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #555;
+}
+
+.essay-introduction p {
+    margin: 0;
+}
+
+/* Main essay */
+
+.essay-body {
+    font-size: 1.08rem;
+    line-height: 1.85;
+}
+
+.essay-body p {
+    margin: 0 0 1.75rem;
+}
+
+/* Give major turns in the essay more room */
+
+.essay-body .section-break {
+    margin-top: 3.5rem;
+}
+
+/* Final lines */
+
+.essay-ending {
+    margin-top: 5rem;
+}
+
+.essay-ending p {
+    margin-bottom: 0.65rem;
+}
+
+.essay-ending p:last-child {
+    margin-top: 0;
+}
+
+/* PDF link */
+
+.essay-download {
+    margin: 5rem 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+    font-size: 0.95rem;
+}
+
+.essay-download a {
+    color: #222;
+    text-decoration: none;
+    border-bottom: 1px solid #999;
+    padding-bottom: 0.15rem;
+}
+
+.essay-download a:hover {
+    border-bottom-color: #222;
+}
+
+/* Notes framework */
+
+.essay-notes {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 1px solid #bbb;
+}
+
+.essay-notes h2 {
+    margin: 0 0 0.7rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.essay-notes .notes-introduction {
+    margin: 0 0 2.5rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #666;
+}
+
+/* Framework table */
+
+.essay-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+.essay-table th,
+.essay-table td {
+    padding: 1rem 0.8rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+}
+
+.essay-table th {
+    padding-top: 0;
+    font-weight: 400;
+    color: #666;
+}
+
+.essay-table th:first-child,
+.essay-table td:first-child {
+    padding-left: 0;
+}
+
+.essay-table th:last-child,
+.essay-table td:last-child {
+    padding-right: 0;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .essay {
+        padding: 2rem 1.25rem 5rem;
+    }
+
+    .essay-header {
+        margin: 2.5rem 0 4rem;
+    }
+
+    .essay-body {
+        font-size: 1.03rem;
+        line-height: 1.78;
+    }
+
+    .essay-body p {
+        margin-bottom: 1.55rem;
+    }
+
+    .essay-introduction {
+        padding-left: 1rem;
+    }
+
+    .essay-notes {
+        margin-top: 4.5rem;
+    }
+
+    .essay-table,
+    .essay-table tbody,
+    .essay-table tr,
+    .essay-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .essay-table thead {
+        display: none;
+    }
+
+    .essay-table tr {
+        padding: 1.2rem 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .essay-table td {
+        padding: 0.25rem 0;
+        border: 0;
+    }
+
+    .essay-table td:first-child {
+        font-weight: 500;
+        margin-bottom: 0.35rem;
+    }
+.essay-colophon {
+    margin-top: 6rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.essay-colophon p {
+    margin: 0 0 1.4rem;
+}
+
+.essay-colophon .written-for {
+    margin-bottom: 5rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.essay-colophon .essay-link {
+    margin: 2rem 0 1.5rem;
+}
+
+.essay-colophon a {
+    color: #444;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.essay-colophon a:hover {
+    border-bottom-color: #666;
+}
 }
 
 </style>
@@ -77,21 +318,27 @@
     <!-- include header.html
     change the height if add new button-->
     <iframe src="../../header.html" width="100%" height="230" style="border:2px solid white;"></iframe> 
+<article class="essay">
 
-    <!-- MAIN (Center website) -->
-<div class="main">    
-  <div class="container">
-    <article class="between-states">
+    <header class="essay-header">
+        <h1><em>Between States</em></h1>
+        <p class="author">Luna Gui</p>
+        <p class="place-date">Sydney, 2026</p>
+    </header>
 
-<header class="essay-header">
-    <h1><em>Between States</em></h1>
-    <p class="author">Luna Gui</p>
-    <p class="year">Sydney, 2026</p>
-</header>
 
-  <section class="essay">
+    <div class="essay-introduction">
+        <p>
+            <em>Between States</em> was written alongside the development of
+            <em>WU (物 / 悟): A Material Dialogue</em>. Instead of explaining
+            the exhibition, it reflects on ideas that emerged through making,
+            material, and perception.
+        </p>
+    </div>
 
-    <p>
+    <div class="essay-body">
+
+<p>
       After a collaboration during our MFA at the National Art School in 2022,
       Ma and I had been looking for an opportunity to continue a conversation
       that never quite reached an ending.
@@ -103,7 +350,7 @@
 
     <p>
       This seemed like common ground. Although our practices are quite different,
-      both are rooted in an engagement with physical things. Quanzhu's work is
+      both are rooted in an engagement with physical things. Ma's work is
       shaped through processes of burning, weathering, crushing, and exposure.
       My own practice often begins with simple materials and constructed forms,
       using them to explore perception, spatial relationships, and the experience
@@ -195,15 +442,15 @@
     </p>
 
     <p>
-      Perhaps this is also where the idea of <em>Between States</em> began to
+      Perhaps this is also where the idea of 'Between States' began to
       emerge for me.
     </p>
 
     <p>
       What remains most interesting is not the materials themselves but the way
-      certainty emerged through relationships. Individual works often seemed to
-      contain multiple possibilities, yet once they entered into dialogue with one
-      another, certain decisions suddenly felt inevitable. It often felt less as
+      certainty emerged through relationships. Individual works often seemed to 
+      contain multiple possibilities, yet as relationships emerged between them, 
+      some possibilities became more convincing than others. It often felt less as
       though we were constructing the exhibition than discovering the logic that
       already existed within it.
     </p>
@@ -216,80 +463,83 @@
       relationship with something else.
     </p>
 
-    <p class="closing">
-      The works remain between states.<br>
-      So, perhaps, do we.
+<div class="essay-ending">
+    <p>The works remain between states.</p>
+    <p>So, perhaps, do we.</p>
+</div>
+
+
+    <section class="essay-notes">
+        <h2>Notes Towards <em>Between States</em></h2>
+
+        <p class="notes-introduction">
+            An evolving framework for thinking through material,
+            perception, and transformation.
+        </p>
+
+        <table class="essay-table">
+            <thead>
+                <tr>
+                    <th>Mode</th>
+                    <th>Question</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Material Lineage</td>
+                    <td>What does it become?</td>
+                    <td>Tree → Timber → Plywood → Veneer → Paper</td>
+                </tr>
+
+                <tr>
+                    <td>Physical</td>
+                    <td>How does it change?</td>
+                    <td>Burning, cutting, weathering, crushing, casting</td>
+                </tr>
+
+                <tr>
+                    <td>Perceptual</td>
+                    <td>How is it experienced?</td>
+                    <td>Object ↔ Image, Flat ↔ Spatial</td>
+                </tr>
+
+                <tr>
+                    <td>Conceptual</td>
+                    <td>How is it understood?</td>
+                    <td>Thing ↔ Realisation (物 ↔ 悟)</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+<br><br>
+<div class="essay-colophon">
+  
+    <div class="essay-context">
+        <p>Written for</p>
+        <p><em>WU (物 / 悟): A Material Dialogue</em></p>
+        <p>Articulate Project Space</p>
+        <p>1–23 August 2026</p>
+            <p class="essay-link">
+        <a href="between-states.pdf" target="_blank">
+            Read the formatted essay (PDF)
+        </a>
     </p>
 
-  </section>
-<hr>
+    <p>
+        <a href="../index.html">← Return to the exhibition</a>
+    </p>
+    </div>
 
-  <section class="notes-towards-between-states">
 
-    <header>
-      <h2>Notes Towards <em>Between States</em></h2>
-      <p>
-        An evolving framework for thinking through material, perception, and
-        transformation.
-      </p>
-    </header>
+</div>
 
-    <table>
-      <thead>
-        <tr>
-          <th scope="col">Mode</th>
-          <th scope="col">Question</th>
-          <th scope="col">Example</th>
-        </tr>
-      </thead>
 
-      <tbody>
-        <tr>
-          <td>Genealogical</td>
-          <td>What does it become?</td>
-          <td>Tree → Timber → Plywood → Veneer → Paper</td>
-        </tr>
 
-        <tr>
-          <td>Physical</td>
-          <td>How does it change?</td>
-          <td>Burning, cutting, weathering, crushing, casting</td>
-        </tr>
-
-        <tr>
-          <td>Perceptual</td>
-          <td>How is it experienced?</td>
-          <td>Object ↔ Image, Flat ↔ Spatial</td>
-        </tr>
-
-        <tr>
-          <td>Conceptual</td>
-          <td>How is it understood?</td>
-          <td>Thing ↔ Realisation (物 ↔ 悟)</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <hr>
-
-<p><strong>Written for</strong></p>
-
-<p><em>WU (物 / 悟): A Material Dialogue</em><br>
-Articulate Project Space<br>
-1–23 August 2026</p>
-
-<p>
-<a href="../index.html">← Return to the exhibition</a>
-</p>
-
-  </section>
 
 </article>
-    
-  <!-- <button type="button" class="btn btn-primary" onclick="window.location.href='installation.html'">Learn More</button> -->
-</div>
- <!-- END OF MAIN (Center website) -->
-</div>
   
 <iframe src="../../footer.html" width="100%" height="200" style="border:2px solid white;"></iframe> 
   
