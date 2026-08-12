@@ -96,6 +96,45 @@ h5 {
 .exhibition-text {
   margin-bottom: 4em;
 }
+/* Installation Views */
+.installation-views {
+  margin: 5em 0;
+}
+
+.installation-views h2 {
+  margin-bottom: 2.5em;
+}
+
+.installation-image {
+  margin: 0 auto 5em;
+  text-align: center;
+}
+
+/* Portrait installation views */
+.installation-image.portrait img {
+  width: 70%;
+  max-width: 700px;
+  height: auto;
+}
+
+/* Landscape installation views */
+.installation-image.landscape img {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .installation-image.portrait img,
+  .installation-image.landscape img {
+    width: 100%;
+  }
+
+  .installation-image {
+    margin-bottom: 3em;
+  }
+}
 
 /* Essays section */
 .essays {
@@ -195,6 +234,32 @@ iframe {
 <p>
   By bringing these two practices into dialogue, <em>WU</em> invites visitors to experience familiar materials in new ways and discover connections between materials, space, and the act of looking.
 </p>
+</section>
+
+<hr>
+
+<section class="installation-views">
+  <h2>Installation Views</h2>
+
+  <div class="installation-image portrait">
+    <img src="images/install1.jpeg" alt="Installation view of WU">
+    <p>Approaching WU from the ground floor. Foreground work by Fiona Davies is part of <em>site/situation</em> at Articulate Project Space.</p>
+  </div>
+
+  <div class="installation-image portrait">
+    <img src="images/install2.jpeg" alt="Installation view of WU">
+    <p>Entering WU from the stairwell, Articulate Project Space.</p>
+  </div>
+
+  <div class="installation-image landscape">
+    <img src="images/install3.jpeg" alt="Installation view of WU">
+    <p>Installation view of <em>WU (物 / 悟): A Material Dialogue</em>.</p>
+  </div>
+
+  <div class="installation-image portrait">
+    <img src="images/install4.jpeg" alt="Installation view of WU">
+    <p>Installation view of <em>WU</em>, with works by Luna Gui and Quanzhu Ma in spatial dialogue.</p>
+  </div>
 </section>
 
 <section class="essays">
