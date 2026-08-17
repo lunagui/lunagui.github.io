@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Luna Derivatives">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="Luna Gui">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Luna Derivatives 2024-25</title>
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-color: white;
+      padding: 20px;
+      font-family: Arial;
+    }
+    
+    /* Center website */
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+    
+    h1 {
+      font-size: 50px;
+      word-break: break-all;
+    }
+
+    p{
+        color: #555;
+        line-height: 1.75;
+    }
+
+    .work {
+  margin: 0 0 5em;
+}
+
+.work img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.work figcaption {
+  margin-top: 0.6em;
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+.work.small img {
+  width: 45%;
+}
+    
+    .row {
+      margin: 8px -16px;
+    }
+    
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
+      padding: 8px;
+    }
+    
+    /* Create four equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 25%;
+    }
+
+    .columnhalf {
+      float: left;
+      width: 50%;
+    }
+    
+    /* Clear floats after rows */ 
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Content */
+    .content {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 900px) {
+      .column {
+        width: 50%;
+      }
+      .columnhalf {
+        width: 50%;
+      }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+      .columnhalf {
+        width: 100%;
+      }
+    }
+    </style>
+
+</head>
+<body>
+    <!-- include header.html
+    change the height if add new button-->
+    <iframe src="../header.html" width="100%" height="230" style="border:2px solid white;"></iframe> 
+    
+<!-- MAIN (Center website) -->
+<div class="main">
+
+    <h2>Derivatives 2024-25</h2>
+  <p><strong>MFA Research project and solo exhibition</strong>
+  </p>
+
+  <p>
+  My MFA research project, <em>Seeing Depth: Perception and Phenomenology of Space</em>, established the foundation of my practice by investigating how spatial perception is constructed through visual, material, and architectural encounters. Drawing on Gestalt theory and Merleau-Ponty’s phenomenology, I developed the concept of <strong>perceived space</strong>—a mental field in which visual impressions are formed, held, and reorganised as the viewer moves through space.
+</p>
+
+<p>
+  Through drawing, wall-based constructions, and site-responsive installations, I created a series of perceptual tests exploring instability between figure and ground, surface and depth, and the thresholds where pictorial and physical space intersect. <em>Derivatives</em> (Articulate Project Space, 2025) expanded this inquiry across cardboard constructions, wood structures, installation components, and drawing. The exhibition demonstrated how perception, movement, and architectural context co-produce the spatial experience of the work.
+</p>
+
+<img src="images/D_poster.png" alt="pic of poster" style="width:80%; display:block; margin:0 auto;">
+
+<figure class="work small">
+  <img src="images/D_6.JPG" alt="Derivatives 6 (Before Image)">
+  <figcaption>
+    <em>Derivatives 6 (Before Image)</em>, 2024<br>
+    Pencil on tracing paper, 29.7 × 21 cm
+  </figcaption>
+</figure>
+
+
+   <!-- INSTALLATION VIEW WITH CLICKABLE ARTWORKS -->
+
+<section class="installation-section">
+
+  <div class="installation-map">
+    <img
+      src="images/D_total.jpg"
+      alt="Installation view of Luna Gui’s works in the 2025 National Art School Postgraduate Exhibition"
+      class="installation-image"
+    >
+  <p class="installation-instruction">
+    Select an artwork in the installation view to see a closer image.
+  </p>
+    <!--
+      Hotspot positions use percentages:
+      left, top, width and height.
+
+      Adjust these values until each hotspot sits over the correct artwork.
+    -->
+
+        <button
+  class="artwork-hotspot"
+  style="left: 3%; top: 25%; width: 10%; height: 40%;"
+  data-image="images/D_till this point.JPG"
+  data-title="Derivatives N/11.9.1 (Till this point)"
+  data-details="acrylic on wood construction, 121 × 24 × 5 cm, 2025"
+  data-collection="City of Sydney Art Collection"
+  aria-label="Open detailed image of Deriv">
+</button>
+
+    <button
+      class="artwork-hotspot"
+ style="left: 25%; top: 30%; width: 10%; height: 20%;"
+      data-image="images/D_12a.JPG"
+      data-title="Derivatives N/12a"
+      data-details="acrylic on wood construction<br>54 × 46 × 10 cm<br>2024"
+      aria-label="Open detailed image of Work One"
+    ></button>
+
+
+    <button
+      class="artwork-hotspot"
+ style="left: 40%; top: 30%; width: 8%; height: 20%;"
+      data-image="images/D_12b.JPG"
+      data-title="Derivatives N/12b"
+      data-details="acrylic on wood construction<br>54 × 36 × 5.6 cm<br>2024"
+      aria-label="Open detailed image of Work One"
+    ></button>
+
+    <button
+      class="artwork-hotspot"
+ style="left: 50%; top: 30%; width: 8%; height: 20%;"
+      data-image="images/D_12c.JPG"
+      data-title="Derivatives N/12c"
+      data-details="acrylic on wood construction<br>54 × 36 × 11 cm<br>2024"
+      aria-label="Open detailed image of Work One"
+    ></button>
+
+        <button
+      class="artwork-hotspot"
+ style="left: 60%; top: 30%; width: 5%; height: 20%;"
+      data-image="images/D_12d.JPG"
+      data-title="Derivatives N/12d"
+      data-details="acrylic on wood construction<br>54 × 3 × 5.6 cm<br>2025"
+      aria-label="Open detailed image of Work One"
+    ></button>
+
+  </div>
+</section>
+
+
+<!-- LIGHTBOX -->
+
+<div
+  class="artwork-lightbox"
+  id="artworkLightbox"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-labelledby="lightboxTitle"
+>
+  <button
+    class="lightbox-close"
+    id="lightboxClose"
+    type="button"
+    aria-label="Close detailed artwork image"
+  >
+    &times;
+  </button>
+
+  <button
+    class="lightbox-arrow lightbox-previous"
+    id="lightboxPrevious"
+    type="button"
+    aria-label="Previous artwork"
+  >
+    &#10094;
+  </button>
+
+  <figure class="lightbox-content">
+    <img
+      src=""
+      alt=""
+      id="lightboxImage"
+      class="lightbox-image"
+    >
+
+    <figcaption class="lightbox-caption">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxDetails"></p>
+    </figcaption>
+  </figure>
+
+  <button
+    class="lightbox-arrow lightbox-next"
+    id="lightboxNext"
+    type="button"
+    aria-label="Next artwork"
+  >
+    &#10095;
+  </button>
+</div>
+
+
+<style>
+.collection {
+  margin-top: 0.8rem;
+  font-style: normal;
+  opacity: 0.75;
+}
+  .installation-section {
+    width: min(100%, 1200px);
+    margin: 4rem auto;
+  }
+
+  .installation-instruction {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    opacity: 0.7;
+  }
+
+  .installation-map {
+    position: relative;
+    width: 100%;
+  }
+
+  .installation-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .artwork-hotspot {
+    position: absolute;
+    display: block;
+    padding: 0;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: zoom-in;
+    transition:
+      border-color 180ms ease,
+      background-color 180ms ease;
+  }
+
+  .artwork-hotspot:hover,
+  .artwork-hotspot:focus-visible {
+    border-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.12);
+    outline: none;
+  }
+
+  .artwork-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 5rem;
+    background: rgba(0, 0, 0, 0.94);
+  }
+
+  .artwork-lightbox.is-open {
+    display: flex;
+  }
+
+  .lightbox-content {
+    max-width: min(1100px, 88vw);
+    max-height: 92vh;
+    margin: 0;
+    text-align: center;
+  }
+
+  .lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: 78vh;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  .lightbox-caption {
+    margin-top: 1rem;
+    color: white;
+  }
+
+  .lightbox-caption h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .lightbox-caption p {
+    margin: 0.35rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.75;
+  }
+
+  #lightboxTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+#lightboxTitle em {
+  font-style: italic;
+}
+#lightboxDetails {
+  margin-top: 0.6rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+  .lightbox-close,
+  .lightbox-arrow {
+    position: absolute;
+    border: 0;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+  }
+
+  .lightbox-close {
+    top: 1rem;
+    right: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .lightbox-arrow {
+    top: 50%;
+    padding: 1rem;
+    font-size: 2rem;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-previous {
+    left: 1rem;
+  }
+
+  .lightbox-next {
+    right: 1rem;
+  }
+
+  .lightbox-close:hover,
+  .lightbox-close:focus-visible,
+  .lightbox-arrow:hover,
+  .lightbox-arrow:focus-visible {
+    opacity: 0.65;
+    outline: none;
+  }
+
+  body.lightbox-open {
+    overflow: hidden;
+  }
+
+  @media (max-width: 700px) {
+    .installation-section {
+      margin: 2.5rem auto;
+    }
+
+    .artwork-lightbox {
+      padding: 3.5rem 1rem 5rem;
+    }
+
+    .lightbox-content {
+      max-width: 100%;
+    }
+
+    .lightbox-image {
+      max-height: 70vh;
+    }
+
+    .lightbox-arrow {
+      top: auto;
+      bottom: 0.75rem;
+      transform: none;
+    }
+
+    .lightbox-previous {
+      left: calc(50% - 4rem);
+    }
+
+    .lightbox-next {
+      right: calc(50% - 4rem);
+    }
+  }
+</style>
+
+
+<script>
+  const hotspots = Array.from(
+    document.querySelectorAll(".artwork-hotspot")
+  );
+
+  const lightbox = document.getElementById("artworkLightbox");
+  const lightboxImage = document.getElementById("lightboxImage");
+  const lightboxTitle = document.getElementById("lightboxTitle");
+  const lightboxDetails = document.getElementById("lightboxDetails");
+  const closeButton = document.getElementById("lightboxClose");
+  const previousButton = document.getElementById("lightboxPrevious");
+  const nextButton = document.getElementById("lightboxNext");
+
+  let currentArtworkIndex = 0;
+  let lastFocusedHotspot = null;
+
+function showArtwork(index) {
+  currentArtworkIndex =
+    (index + hotspots.length) % hotspots.length;
+
+  const artwork = hotspots[currentArtworkIndex];
+
+  lightboxImage.src = artwork.dataset.image;
+  lightboxImage.alt = artwork.dataset.title;
+
+  lightboxTitle.innerHTML = `<em>${artwork.dataset.title}</em>`;
+
+  let html = artwork.dataset.details;
+
+  if (artwork.dataset.collection) {
+    html += `<div class="collection">${artwork.dataset.collection}</div>`;
+  }
+
+  lightboxDetails.innerHTML = html;
+}
+
+  function openLightbox(index) {
+    lastFocusedHotspot = document.activeElement;
+
+    showArtwork(index);
+
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+
+    closeButton.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("lightbox-open");
+
+    lightboxImage.src = "";
+
+    if (lastFocusedHotspot) {
+      lastFocusedHotspot.focus();
+    }
+  }
+
+  hotspots.forEach((hotspot, index) => {
+    hotspot.addEventListener("click", () => {
+      openLightbox(index);
+    });
+  });
+
+  previousButton.addEventListener("click", () => {
+    showArtwork(currentArtworkIndex - 1);
+  });
+
+  nextButton.addEventListener("click", () => {
+    showArtwork(currentArtworkIndex + 1);
+  });
+
+  closeButton.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (event) => {
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!lightbox.classList.contains("is-open")) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+
+    if (event.key === "ArrowLeft") {
+      showArtwork(currentArtworkIndex - 1);
+    }
+
+    if (event.key === "ArrowRight") {
+      showArtwork(currentArtworkIndex + 1);
+    }
+  });
+</script>
+
+<figure class="work">
+  <img src="images/D_installation.JPG" alt="Derivatives N/11s site-specific installation">
+
+  <figcaption>
+    <em>Derivatives N/11s site-specific installation</em>, 2025<br>
+    Cardboard, paper, pencil lines on wall, photograph, pencil on paper,
+    cut black paper, blue string, pins
+  </figcaption>
+</figure>
+    
+<figure class="work small">
+  <img src="images/D_afterimage.JPG" alt="After Image">
+
+  <figcaption>
+    <em>After Image</em>, 2025<br>
+    Pencil on black paper, 29.7 × 21 cm
+  </figcaption>
+</figure>
+    
+    <!-- END MAIN -->
+    </div>
+
+    
+  
+<iframe src="../footer.html" width="100%" height="200" style="border:2px solid white;"></iframe> 
+  
+</body>
+</html>
+
+
